@@ -8,12 +8,11 @@
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrob.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 }
 
 .modal {
@@ -23,22 +22,22 @@
   width: 528px;
   min-height: 581px;
   padding: 40px;
-  background: #fff;
+  background: getColor('light-theme');
   border-radius: 4px;
   box-shadow: var(--shadow-modal);
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrob.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  .backdrob.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
 
 .modal-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: calc(23 / 20);
-  color: var(--second-text-color);
+  @include font(20px, 700, 1.15, null);
+  // font-weight: 700;
+  // font-size: 20px;
+  // line-height: calc(23 / 20);
+  color: getColor('secondary-text');
   text-align: center;
   margin-bottom: 12px;
 }
@@ -67,6 +66,11 @@
 
 .form-field__text {
   margin-bottom: 4px;
+  display: block;
+  @include font(12px, null, 1.17, 0.01em);
+  // font-size: 12px;
+  // line-height: 1.17;
+  // letter-spacing: 0.01em;
 }
 
 .form-field__input {
@@ -79,12 +83,9 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:focus,
   &:hover {
-    border-color: var(--accent-color);
+    border-color: getColor('accent');
   }
-  &:focus + .form-field__icon,
-  &:hover + .form-field__icon {
-    fill: var(--accent-color);
-  }
+
   &:focus {
     cursor: text;
   }
@@ -96,13 +97,10 @@
   top: 50%;
   left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field__text {
-  display: block;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  .form-field__input:focus + &,
+  .form-field__input:hover + & {
+    fill: getColor('accent');
+  }
 }
 
 .modal-form__comment {
@@ -118,36 +116,37 @@
 
   &:focus,
   &:hover {
-    border-color: var(--accent-color);
+    border-color: getColor('accent');
   }
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include font(12px, null, 1.17, 0.01em);
+    // font-size: 12px;
+    // line-height: 1.17;
+    // letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
 }
 
 .form-field__check-label {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: calc(28 / 14);
-  color: var(--primary-text-color);
-}
+  @extend %align-list;
 
-.form-field__check-label span {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #000;
-  border-radius: 2px;
-  margin-right: 7px;
-  margin-left: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include font(12px, null, 2, 0.01em);
+  // font-size: 14px;
+  // line-height: calc(28 / 14);
+  color: getColor('primary-text');
+  & span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000;
+    border-radius: 2px;
+    margin-right: 7px;
+    margin-left: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .form-field__icon-check {
@@ -156,7 +155,7 @@
 }
 
 .form-field__check-input:checked + .form-field__check-label > span {
-  background-color: var(--accent-color);
+  background-color: getColor('accent');
   border: none;
 }
 
@@ -165,7 +164,7 @@
 }
 
 .form-field__check-link {
-  color: var(--accent-color);
+  color: getColor('accent');
   text-decoration: underline;
 }
 
@@ -186,15 +185,15 @@
   justify-content: center;
   align-items: center;
   box-shadow: var(--shadow-modal);
-  background-color: var(--background-primary-color);
-  color: #000;
+  background-color: getColor('background-primary');
+  color: getColor('logo-web');
   transition-property: color, box-shadow, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: getColor('accent');
     box-shadow: none;
     border-color: rgba(0, 0, 0, 0.1);
   }
