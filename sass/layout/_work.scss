@@ -40,6 +40,6 @@
 
 .work__title {
   color: getColor('light-theme');
-  @include font(null, 700, 0.88, null);
+  @include font(14px, 700, 1.17, null);
   text-transform: uppercase;
 }

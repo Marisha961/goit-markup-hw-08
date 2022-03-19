@@ -40,9 +40,8 @@ img {
 }
 
 .team__text {
-  @include font(16px, null, 1.19, null);
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(16px, null, 1.17, null);
+
   text-align: center;
   margin-bottom: 16px;
 }

@@ -297,9 +297,24 @@ a {
   fill: currentColor;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section__title {
+  color: #212121;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .header {
   background-color: #ffffff;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   padding-top: 24px;
   padding-bottom: 25px;
@@ -310,7 +325,7 @@ a {
 .logo {
   font-family: Raleway, sans-serif;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.17;
   color: #000;
 }
 
@@ -401,8 +416,9 @@ a {
   color: #fff;
   font-size: 44px;
   font-weight: 900;
-  line-height: 1.3;
+  line-height: 1.36;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-align: center;
   width: 696px;
   height: 120px;
@@ -498,8 +514,9 @@ a {
 
 .work__title {
   color: #fff;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 0.88;
+  line-height: 1.17;
   text-transform: uppercase;
 }
 
@@ -547,9 +564,7 @@ img {
 
 .team__text {
   font-size: 16px;
-  line-height: 1.19;
-  font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.17;
   text-align: center;
   margin-bottom: 16px;
 }
@@ -639,6 +654,7 @@ footer {
 }
 
 .address__link {
+  font-size: 14px;
   line-height: 1.71;
   font-style: normal;
   color: #fff;
@@ -664,6 +680,7 @@ footer {
 
 .foot-social__title {
   color: #fff;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.17;
   text-transform: uppercase;
