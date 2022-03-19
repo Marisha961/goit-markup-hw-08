@@ -11,7 +11,8 @@
   cursor: pointer;
   transition: background-color 250ms var(--cubic-bezier),
     border 250ms var(--cubic-bezier);
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: getColor('btn-accent');
     border: 1px solid getColor('btn-accent');
   }

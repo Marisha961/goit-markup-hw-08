@@ -1,12 +1,10 @@
-.section--work {
+.section--padding-top {
   padding-top: 0;
 }
 
-.container__title {
+.section__title {
   color: getColor('secondary-text');
   @include font(36px, null, 1.17, null);
-  // font-size: 36px;
-  // line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -14,9 +12,6 @@
 .work {
   display: flex;
   flex-wrap: wrap;
-}
-
-.work--list {
   margin-left: -30px;
   margin-bottom: -30px;
 }
@@ -27,7 +22,7 @@
   margin-bottom: 30px;
 }
 
-.work__substrate {
+.work__box {
   position: absolute;
   width: 100%;
   top: calc(294px - 70px);
@@ -46,8 +41,5 @@
 .work__title {
   color: getColor('light-theme');
   @include font(null, 700, 0.88, null);
-  // font-weight: 700;
-  // font-size: 14px;
-  // line-height: 0.88;
   text-transform: uppercase;
 }

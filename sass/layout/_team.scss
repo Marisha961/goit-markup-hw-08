@@ -9,12 +9,7 @@ img {
   flex-wrap: wrap;
 }
 
-.team--margin {
-  padding: 0;
-  margin: 0;
-}
-
-.team__position {
+.team__item {
   background-color: getColor('light-theme');
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
@@ -25,11 +20,11 @@ img {
   }
 }
 
-.section--team {
+.section--other-background {
   background-color: getColor('background-second');
 }
 
-.team__coworkers {
+.team__box {
   padding-top: var(--cards);
   padding-bottom: var(--cards);
 }
@@ -37,9 +32,7 @@ img {
 .team__title {
   color: getColor('secondary-text');
   @include font(16px, 500, 1.19, null);
-  // font-weight: 500;
-  // font-size: 16px;
-  // line-height: 1.19;
+
   text-align: center;
   padding-bottom: 10px;
   padding-left: 0;
