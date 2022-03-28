@@ -47,6 +47,49 @@
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
+      <button type="button" class="menu-open-btn">
+        <svg class="" width="40" height="40">
+          <use class="ikon-menu" href="./images/ikons.svg#icon-menu_40px1"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mob-menu">
+      <button type="button" class="menu-close-btn">
+        <svg class="" width="40" height="40">
+          <use class="ikon-cross" href="./images/ikons.svg#icon-close_40px1"></use>
+        </svg></button>
+      <ul class="mob-menu-list ">
+        <li class="mob-menu-list__item">
+          <a href="index.html" class="mob-menu-list__link current">Студия</a>
+        </li>
+        <li class="mob-menu-list__item">
+          <a href="portfolio.html" class="mob-menu-list__link">Портфолио</a>
+        </li>
+        <li class="mob-menu-list__item"><a href="" class="mob-menu-list__link">Контакты</a></li>
+      </ul>
+      <ul class="mob-cont-list">
+        <li class="mob-cont-list__item">
+          <a class="mob-cont-list__link tel" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+        <li class="mob-cont-list__item">
+          <a class="mob-cont-list__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+
+      </ul>
+      <ul class="menu-soc-list">
+        <li class="menu-soc-list_item">
+          <a href="" class="mob-soc-list__link">Instagram</a>
+        </li>
+        <li class="menu-soc-list_item">
+          <a href="" class="mob-soc-list__link">Twitter</a>
+        </li>
+        <li class="menu-soc-list_item">
+          <a href="" class="mob-soc-list__link">Facebook</a>
+        </li>
+        <li class="menu-soc-list_item">
+          <a href="" class="mob-soc-list__link">LinkedIn</a>
+        </li>
+      </ul>
     </div>
   </header>
   <main>
@@ -57,10 +100,10 @@
         <button data-modal-open type="button" class="btn">Заказать услугу</button>
       </div>
     </section>
-    <!--                Преимущества -->
+    <!--              Преимущества -->
     <section class="section">
       <div class="container">
-        <!--скрытый заголовок-->
+        <!--      скрытый заголовок -->
         <h2 class="visually-hidden">Почему мы</h2>
         <ul class="feature">
           <li class="feature__item">
@@ -111,7 +154,7 @@
       </div>
     </section>
     <!--               Чем занимаемся -->
-    <section class="section section--padding-top">
+    <!-- <section class="section section--padding-top">
       <div class="container">
         <h2 class="section__title">Чем мы занимаемся</h2>
         <ul class="work">
@@ -135,15 +178,19 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
     <!--               Наша команда -->
     <section class="section section--other-background">
       <div class="container">
         <h2 class="section__title">Наша команда</h2>
         <ul class="team">
           <li class="team__item">
-
-            <img src="./images/img(4).jpg" alt="продуктовый дизайнер" width="270" height="260" />
+            <picture>
+              <source srcset="images/desk.team/img@1x-min.jpg 1x, images/desk.team/img@2x-min.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="images/tab.team/img@1x-min.jpg 1x, images/tab.team/img@2x-min.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="images/mob.team/img@1x-min.jpg 1x, images/mob.team/img@2x-min.jpg 2x" media="(min-width: 320px)" />
+              <img src="./images/img(4).jpg" alt="продуктовый дизайнер" />
+            </picture>
 
             <div class="team__box">
               <h3 class="team__title">Игорь Демьяненко</h3>
@@ -179,8 +226,12 @@
           </li>
 
           <li class="team__item">
-
-            <img src="./images/img(5).jpg" alt="фронтэнд разработчик" width="270" height="260" />
+            <picture>
+              <source srcset="images/desk.team/img@1x(2)-min.jpg 1x, images/desk.team/img@2x(2)-min.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="images/tab.team/img@1x(2)-min.jpg 1x, images/tab.team/img@2x(2)-min.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="images/mob.team/img@1x(2)-min.jpg 1x, images/mob.team/img@2x(2)-min.jpg 2x" media="(min-width: 320px)" />
+              <img src="./images/img(5).jpg" alt="фронтэнд разработчик" />
+            </picture>
 
             <div class="team__box">
               <h3 class="team__title">Ольга Репина</h3>
@@ -215,8 +266,12 @@
           </li>
 
           <li class="team__item">
-
-            <img src="./images/img(6).jpg" alt="маркетолог" width="270" height="260" />
+            <picture>
+              <source srcset="images/desk.team/img@1x(3)-min.jpg 1x, images/desk.team/img@2x(3)-min.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="images/tab.team/img@1x(3)-min.jpg 1x, images/tab.team/img@2x(3)-min.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="images/mob.team/img@1x(3)-min.jpg 1x, images/mob.team/img@2x(3)-min.jpg 2x" media="(min-width: 320px)" />
+              <img src="./images/img(6).jpg" alt="маркетолог" />
+            </picture>
 
             <div class="team__box">
               <h3 class="team__title">Николай Тарасов</h3>
@@ -251,8 +306,12 @@
           </li>
 
           <li class="team__item">
-
-            <img src="./images/img(7).jpg" alt="дизайнер" width="270" height="260" />
+            <picture>
+              <source srcset="images/desk.team/img@1x(4)-min.jpg 1x, images/desk.team/img@2x(4)-min.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="images/tab.team/img@1x(4)-min.jpg 1x, images/tab.team/img@2x(4)-min.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="images/mob.team/img@1x(4)-min.jpg 1x, images/mob.team/img@2x(4)-min.jpg 2x" media="(min-width: 320px)" />
+              <img src="./images/img(7).jpg" alt="дизайнер" />
+            </picture>
 
             <div class="team__box">
               <h3 class="team__title">Михаил Ермаков</h3>
@@ -288,7 +347,7 @@
         </ul>
       </div>
     </section>
-    <!--               Постоянные клиенты -->
+    <!-- Постоянные клиенты -->
     <section class="section">
       <div class="container">
         <h2 class="client section__title">Постоянные клиенты</h2>
@@ -337,8 +396,8 @@
   </main>
 
   <!--          Подвал -->
-  <footer>
-    <div class="foot container">
+  <!-- <footer>
+    <!-- <div class="foot container">
       <div class="location">
         <a href=" " lang="en" class="logo foot__logo"><span class="logo__web">Web</span>Studio</a>
         <address>
@@ -356,7 +415,7 @@
         </address>
       </div>
       <!--                             подвал соцсети -->
-      <div class="foot-social foot-social--margin">
+  <!-- <div class="foot-social foot-social--margin">
         <h3 class="foot-social__title">Присоединяйтесь</h3>
         <ul class="socials">
           <li class="socials__item">
@@ -384,10 +443,10 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
-      <!--                        подвал форма -->
-      <div class="foot__warm">
+  <!--                        подвал форма -->
+  <!-- <div class="foot__warm">
         <form class="foot-form">
           <div class="foot-form__capsule">
             <label for="foot-email" class="foot-form__label foot-social__title">Подпишитесь на рассылку</label>
@@ -401,8 +460,8 @@
           </button>
         </form>
       </div>
-    </div>
-  </footer>
+    </div> -->
+  <!-- </footer> -->
 
   <!--                   МОДАЛЬНОЕ ОКНО -->
 

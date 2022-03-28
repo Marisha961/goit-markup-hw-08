@@ -1,28 +1,46 @@
 .header {
+  // position: ;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: getColor('background-primary');
-  @include font(14px, 500, 1.17, 0.02em);
+  // @include font(14px, 500, 1.17, 0.02em);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include tab {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @include desk {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 
 .header__container {
   @extend %align-list;
+  justify-content: space-between;
 }
 
 /*                     header logo      */
 
 .logo {
   font-family: Raleway, sans-serif;
-  @include font(26px, null, 1.17, null);
+
+  @include font(24px, null, 1.17, null);
+
+  @include desk {
+    @include font(26px, null, 1.17, null);
+  }
 
   color: getColor('logo-web');
 }
 
-.navigation__logo {
-  margin-right: 93px;
-}
+// .navigation__logo {
+//   margin-right: 93px;
+// }
 
 .logo__web {
   color: getColor('accent');
@@ -35,7 +53,10 @@
 }
 
 .site-nav {
-  display: flex;
+  display: none;
+  @include tab {
+    display: flex;
+  }
 }
 
 .navigation__site-nav {
@@ -79,7 +100,10 @@
 }
 
 .auth {
-  display: flex;
+  display: none;
+  @include tab {
+    display: flex;
+  }
 }
 
 .header__auth {
@@ -104,4 +128,24 @@
 .auth__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+//                         MENU
+.menu-open-btn,
+.menu-close-btn {
+  // width: 40px;
+  // height: 40px;
+  display: block;
+  margin-left: auto;
+  border: none;
+  // background-color: transparent;
+}
+.mob-menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: getColor('background-primary');
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
