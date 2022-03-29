@@ -4,17 +4,17 @@
   top: 0;
   left: 0;
   background-color: getColor('background-primary');
-  // @include font(14px, 500, 1.17, 0.02em);
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @include tab {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-  @include desk {
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
+  @include font(null, 500, 1.17, 0.02em);
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  // @include tab {
+  //   padding-top: 21px;
+  //   padding-bottom: 21px;
+  // }
+  // @include desk {
+  //   padding-top: 24px;
+  //   padding-bottom: 25px;
+  // }
 
   border-bottom: 1px solid #ececec;
 }
@@ -39,7 +39,7 @@
 }
 
 // .navigation__logo {
-//   margin-right: 93px;
+
 // }
 
 .logo__web {
@@ -55,12 +55,12 @@
 .site-nav {
   display: none;
   @include tab {
+    margin-left: 88px;
     display: flex;
   }
-}
-
-.navigation__site-nav {
-  margin-left: auto;
+  @include desk {
+    margin-left: 93px;
+  }
 }
 
 .site-nav__link {
@@ -74,13 +74,14 @@
     color: getColor('accent');
   }
   .site-nav & {
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
 .site-nav__item {
   & + & {
-    margin-left: 30px;
+    margin-left: 50px;
   }
 }
 .current {
@@ -103,15 +104,32 @@
   display: none;
   @include tab {
     display: flex;
+    flex-direction: column;
+    @include font(12px, 500, 1.17, 0.02em);
   }
+  @include desk {
+    @include font(14px, 500, 1.17, 0.02em);
+    flex-direction: row;
+    align-items: center;
+  }
+  // margin-left: auto;
+  // gap: 10px;
 }
 
 .header__auth {
   margin-left: auto;
 }
 .auth__item {
-  & + & {
-    margin-left: 30px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @include desk {
+    & + & {
+      margin-left: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 .auth__link {
@@ -126,21 +144,49 @@
 }
 
 .auth__icon {
-  margin-right: 10px;
   fill: currentColor;
+  margin-right: 8px;
+  @include desk {
+    margin-right: 10px;
+  }
 }
 //                         MENU
-.menu-open-btn,
-.menu-close-btn {
-  // width: 40px;
-  // height: 40px;
+.menu-open-btn {
   display: block;
   margin-left: auto;
   border: none;
-  // background-color: transparent;
+  margin-top: 10px;
+  background-color: transparent;
+  @include tab {
+    display: none;
+  }
+}
+.menu-open-btn__ikon-menu {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .menu-open-btn:hover &,
+  .menu-open-btn:focus & {
+    fill: getColor('accent');
+  }
+}
+.menu-close-btn__ikon-cross {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .menu-close-btn:hover &,
+  .menu-close-btn:focus & {
+    fill: getColor('accent');
+  }
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 .mob-menu {
-  position: absolute;
+  position: fixed;
+  @include tab {
+    display: none;
+  }
+  z-index: 1;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -148,4 +194,74 @@
   background-color: getColor('background-primary');
   padding-top: 48px;
   padding-bottom: 48px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px 0 40px;
+    height: 100%;
+  }
+}
+.menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+}
+.mob-menu-list__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-menu-list__link {
+  @include font(40px, 500, 1.17, 0.02em);
+  color: getColor('secondary-text');
+  transition: color 250ms var(--cubic-bezier);
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+.current--color {
+  color: getColor('accent');
+}
+.mob-cont-list__item {
+  margin-bottom: 32px;
+}
+.mob-cont-list__link {
+  @include font(24px, 500, 1.17, 0.02em);
+  &--tel {
+    @include font(34px, 500, 1.17, 0.02em);
+  }
+  &--mail {
+    color: getColor('primary-text');
+  }
+}
+.mob-cont-list--margin {
+  margin-bottom: 64px;
+}
+.menu-soc-list {
+  @extend %align-list;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.menu-soc-list_item {
+  @extend %align-list;
+  & > .mob-soc-list__link {
+    @include font(18px, 500, 1.22, 0.02em);
+    color: getColor('accent');
+  }
+  @include tel {
+    & + &::before {
+      content: '';
+      display: inline-flex;
+      text-align: start;
+      width: 22px;
+      height: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+      transform: rotate(90deg);
+      margin-right: 5px;
+    }
+  }
 }

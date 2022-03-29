@@ -46,6 +46,56 @@
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
+      <button type="button" class="menu-open-btn">
+        <svg class="" width="40" height="40">
+          <use class="menu-open-btn__ikon-menu" href="./images/ikons.svg#icon-menu_40px1"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mob-menu is-hidden">
+      <div class="container">
+        <button type="button" class="menu-close-btn">
+          <svg class="" width="40" height="40">
+            <use class="menu-close-btnikon-cross" href="./images/ikons.svg#icon-close_40px1"></use>
+          </svg>
+        </button>
+        <div class="mob-nav">
+          <ul class="mob-menu-list ">
+            <li class="mob-menu-list__item">
+              <a href="index.html" class="mob-menu-list__link">Студия</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a href="portfolio.html" class="mob-menu-list__link current current--color">Портфолио</a>
+            </li>
+            <li class="mob-menu-list__item"><a href="" class="mob-menu-list__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="mob-social">
+          <ul class="mob-cont-list mob-cont-list--margin">
+            <li class="mob-cont-list__item">
+              <a class="mob-cont-list__link mob-cont-list__link--tel" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-cont-list__item">
+              <a class="mob-cont-list__link mob-cont-list__link--mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+
+          </ul>
+          <ul class="menu-soc-list">
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">Instagram</a>
+            </li>
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">Twitter</a>
+            </li>
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">Facebook</a>
+            </li>
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -81,7 +131,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/techkr.jpg" alt="Ноутбук с галереей сотрудников" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-1-min.jpg 1x, images/exam.desk/desk-ex-1-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-1-min.jpg 1x, images/exam.tab/tab-prog-1-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-1-min.jpg 1x, images/exam.mob/mob-prog-1-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/techkr.jpg" alt="Ноутбук с галереей сотрудников" />
+                </picture>
+
 
                 <p class="text-overley">
                   Технокряк это современная площадка распространения
@@ -98,7 +154,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/poster.jpg" alt="Постер игроки баскетбола" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-2-min.jpg 1x, images/exam.desk/desk-ex-2-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-2-min.jpg 1x, images/exam.tab/tab-prog-2-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-2-min.jpg 1x, images/exam.mob/mob-prog-2-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/poster.jpg" alt="Постер игроки баскетбола" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для
@@ -116,7 +178,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/rest.jpg" alt="Логотип ресторана" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-3-min.jpg 1x, images/exam.desk/desk-ex-3-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-3-min.jpg 1x, images/exam.tab/tab-prog-3-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/img-min.jpg 1x, images/exam.mob/img@2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/rest.jpg" alt="Логотип ресторана" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для
@@ -134,7 +202,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/hphon.jpg" alt="Наушники" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-4-min.jpg 1x, images/exam.desk/desk-ex-4-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-4-min.jpg 1x, images/exam.tab/tab-prog-4-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-3-min.jpg 1x, images/exam.mob/mob-prog-3-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/hphon.jpg" alt="Наушники" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для
@@ -152,7 +226,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/boxes.jpg" alt="Две коробки" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-5-min.jpg 1x, images/exam.desk/desk-ex-5-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-5-min.jpg 1x, images/exam.tab/tab-prog-5-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-5-min.jpg 1x, images/exam.mob/mob-prog-5-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/boxes.jpg" alt="Две коробки" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для
@@ -170,7 +250,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/comp.jpg" alt="Компьютер" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-6-min.jpg 1x, images/exam.desk/desk-ex-6-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-6-min.jpg 1x, images/exam.tab/tab-prog-6-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-6-min.jpg 1x, images/exam.mob/mob-prog-6-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/comp.jpg" alt="Компьютер" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для
@@ -188,7 +274,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/edition.jpg" alt="Открытая книга" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-7-min.jpg 1x, images/exam.desk/desk-ex-7-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-7-min.jpg 1x, images/exam.tab/tab-prog-7-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-7-min.jpg 1x, images/exam.mob/mob-prog-7-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/edition.jpg" alt="Открытая книга" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                 </p>
@@ -204,7 +296,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/labeltag.jpg" alt="Этикетка" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-8-min.jpg 1x, images/exam.desk/desk-ex-8-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-8-min.jpg 1x, images/exam.tab/tab-prog-8-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-8-min.jpg 1x, images/exam.mob/mob-prog-8-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/labeltag.jpg" alt="Этикетка" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                 </p>
@@ -220,7 +318,13 @@
           <li class="card__item">
             <a href="" class="card__link">
               <div class="thumb">
-                <img src="./images/business.jpg" alt="Ноутбук и руки на клавиатуре" width="370" height="294" />
+                <picture>
+                  <source srcset="images/exam.desk/desk-ex-9-min.jpg 1x, images/exam.desk/desk-ex-9-2x-min.jpg 2x" media="(min-width: 1200px)" />
+                  <source srcset="images/exam.tab/tab-prog-9-min.jpg 1x, images/exam.tab/tab-prog-9-2x-min.jpg 2x" media="(min-width: 768px)" />
+                  <source srcset="images/exam.mob/mob-prog-9-min.jpg 1x, images/exam.mob/mob-prog-9-2x-min.jpg 2x" media="(min-width: 320px)" />
+                  <img src="./images/business.jpg" alt="Ноутбук и руки на клавиатуре" />
+                </picture>
+
                 <p class="text-overley">
                   Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                 </p>
@@ -302,6 +406,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

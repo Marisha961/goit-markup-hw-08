@@ -19,8 +19,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  min-height: 581px;
+  @include tel {
+    width: 450px;
+    height: 609px;
+  }
+
+  @include desk {
+    width: 528px;
+    min-height: 581px;
+  }
   padding: 40px;
   background: getColor('light-theme');
   border-radius: 4px;
@@ -33,10 +40,11 @@
 }
 
 .modal-title {
-  @include font(20px, 700, 1.15, null);
-  // font-weight: 700;
-  // font-size: 20px;
-  // line-height: calc(23 / 20);
+  @include font(20px, 700, 1.5, null);
+  @include desk {
+    @include font(20px, 700, 1.15, null);
+  }
+
   color: getColor('secondary-text');
   text-align: center;
   margin-bottom: 12px;
@@ -119,10 +127,10 @@
     border-color: getColor('accent');
   }
   &::placeholder {
-    @include font(12px, null, 1.17, 0.01em);
-    // font-size: 12px;
-    // line-height: 1.17;
-    // letter-spacing: 0.01em;
+    @include font(14px, null, 1.17, 0.01em);
+    @include desk {
+      @include font(12px, null, 1.17, 0.01em);
+    }
     color: rgba(117, 117, 117, 0.5);
   }
 }
@@ -130,7 +138,10 @@
 .form-field__check-label {
   @extend %align-list;
 
-  @include font(12px, null, 2, 0.01em);
+  @include font(12px, null, 1.17, null);
+  @include desk {
+    @include font(14px, null, 1.71, null);
+  }
   // font-size: 14px;
   // line-height: calc(28 / 14);
   color: getColor('primary-text');

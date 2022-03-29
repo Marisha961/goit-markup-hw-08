@@ -49,47 +49,54 @@
       </ul>
       <button type="button" class="menu-open-btn">
         <svg class="" width="40" height="40">
-          <use class="ikon-menu" href="./images/ikons.svg#icon-menu_40px1"></use>
+          <use class="menu-open-btn__ikon-menu" href="./images/ikons.svg#icon-menu_40px1"></use>
         </svg>
       </button>
     </div>
-    <div class="mob-menu">
-      <button type="button" class="menu-close-btn">
-        <svg class="" width="40" height="40">
-          <use class="ikon-cross" href="./images/ikons.svg#icon-close_40px1"></use>
-        </svg></button>
-      <ul class="mob-menu-list ">
-        <li class="mob-menu-list__item">
-          <a href="index.html" class="mob-menu-list__link current">Студия</a>
-        </li>
-        <li class="mob-menu-list__item">
-          <a href="portfolio.html" class="mob-menu-list__link">Портфолио</a>
-        </li>
-        <li class="mob-menu-list__item"><a href="" class="mob-menu-list__link">Контакты</a></li>
-      </ul>
-      <ul class="mob-cont-list">
-        <li class="mob-cont-list__item">
-          <a class="mob-cont-list__link tel" href="tel:+380961111111">+38 096 111 11 11</a>
-        </li>
-        <li class="mob-cont-list__item">
-          <a class="mob-cont-list__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
+    <div class="mob-menu is-hidden">
+      <div class="container">
+        <button type="button" class="menu-close-btn">
+          <svg class="" width="40" height="40">
+            <use class="menu-close-btnikon-cross" href="./images/ikons.svg#icon-close_40px1"></use>
+          </svg>
+        </button>
+        <div class="mob-nav">
+          <ul class="mob-menu-list ">
+            <li class="mob-menu-list__item">
+              <a href="index.html" class="mob-menu-list__link current current--color">Студия</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a href="portfolio.html" class="mob-menu-list__link">Портфолио</a>
+            </li>
+            <li class="mob-menu-list__item"><a href="" class="mob-menu-list__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="mob-social">
+          <ul class="mob-cont-list mob-cont-list--margin">
+            <li class="mob-cont-list__item">
+              <a class="mob-cont-list__link mob-cont-list__link--tel" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-cont-list__item">
+              <a class="mob-cont-list__link mob-cont-list__link--mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
 
-      </ul>
-      <ul class="menu-soc-list">
-        <li class="menu-soc-list_item">
-          <a href="" class="mob-soc-list__link">Instagram</a>
-        </li>
-        <li class="menu-soc-list_item">
-          <a href="" class="mob-soc-list__link">Twitter</a>
-        </li>
-        <li class="menu-soc-list_item">
-          <a href="" class="mob-soc-list__link">Facebook</a>
-        </li>
-        <li class="menu-soc-list_item">
-          <a href="" class="mob-soc-list__link">LinkedIn</a>
-        </li>
-      </ul>
+          </ul>
+          <ul class="menu-soc-list">
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">Instagram</a>
+            </li>
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">Twitter</a>
+            </li>
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">Facebook</a>
+            </li>
+            <li class="menu-soc-list_item">
+              <a href="" class="mob-soc-list__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -154,31 +161,43 @@
       </div>
     </section>
     <!--               Чем занимаемся -->
-    <!-- <section class="section section--padding-top">
+    <section class="section secret section--padding-top">
       <div class="container">
         <h2 class="section__title">Чем мы занимаемся</h2>
         <ul class="work">
           <li class="work__item">
-            <img src="./images/img(2).jpg" alt="Сотрудник с планшетом за компьютером" width="370" height="294" />
+            <picture>
+              <source srcset="images/work/work-1-min.jpg 1x, images/work/work-1-2x-min.jpg 2x" media="(min-width: 1200px)" />
+              <img src="./images/img(2).jpg" alt="Сотрудник с планшетом за компьютером" />
+            </picture>
+
             <div class="work__box">
               <h3 class="work__title">Десктопные приложения</h3>
             </div>
           </li>
           <li class="work__item">
-            <img src="./images/img(1).jpg" alt="Сотрудник с мобильником за компьютером" width="370" height="294" />
+            <picture>
+              <source srcset="images/work/work-2-min.jpg 1x, images/work/work-2-2x-min.jpg 2x" media="(min-width: 1200px)" />
+              <img src="./images/img(1).jpg" alt="Сотрудник с мобильником за компьютером" />
+            </picture>
+
             <div class="work__box">
               <h3 class="work__title">Мобильные приложения</h3>
             </div>
           </li>
           <li class="work__item">
-            <img src="./images/img(3).jpg" alt="Сотрудник с планшетом " width="370" height="294" />
+            <picture>
+              <source srcset="images/work/work-3-min.jpg 1x, images/work/work-3-2x-min.jpg 2x" media="(min-width: 1200px)" />
+              <img src="./images/img(3).jpg" alt="Сотрудник с планшетом " />
+            </picture>
+
             <div class="work__box">
               <h3 class="work__title">Дизайнерские решения</h3>
             </div>
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
     <!--               Наша команда -->
     <section class="section section--other-background">
       <div class="container">
@@ -396,8 +415,8 @@
   </main>
 
   <!--          Подвал -->
-  <!-- <footer>
-    <!-- <div class="foot container">
+  <footer>
+    <div class="foot container">
       <div class="location">
         <a href=" " lang="en" class="logo foot__logo"><span class="logo__web">Web</span>Studio</a>
         <address>
@@ -415,7 +434,7 @@
         </address>
       </div>
       <!--                             подвал соцсети -->
-  <!-- <div class="foot-social foot-social--margin">
+      <div class="foot-social foot-social--margin">
         <h3 class="foot-social__title">Присоединяйтесь</h3>
         <ul class="socials">
           <li class="socials__item">
@@ -443,10 +462,10 @@
             </a>
           </li>
         </ul>
-      </div> -->
+      </div>
 
-  <!--                        подвал форма -->
-  <!-- <div class="foot__warm">
+      <!--                        подвал форма -->
+      <div class="foot__warm">
         <form class="foot-form">
           <div class="foot-form__capsule">
             <label for="foot-email" class="foot-form__label foot-social__title">Подпишитесь на рассылку</label>
@@ -460,8 +479,8 @@
           </button>
         </form>
       </div>
-    </div> -->
-  <!-- </footer> -->
+    </div>
+  </footer>
 
   <!--                   МОДАЛЬНОЕ ОКНО -->
 
@@ -513,6 +532,7 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
