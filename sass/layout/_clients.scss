@@ -10,7 +10,12 @@
   background-color: getColor('background-primary');
   color: getColor('icon');
   max-width: 210px;
-  // width: 170px;
+  @include tab {
+    max-width: 226px;
+  }
+  @include desk {
+    max-width: 170px;
+  }
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;

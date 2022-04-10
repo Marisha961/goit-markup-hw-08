@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   background-color: getColor('background-primary');
-  @include font(null, 500, 1.17, 0.02em);
+  @include font(14px, 500, 1.17, 0.02em);
   // padding-top: 16px;
   // padding-bottom: 16px;
   // @include tab {
@@ -208,6 +208,7 @@
   right: 15px;
   border: none;
   background-color: transparent;
+
 }
 .mob-menu-list__item {
   &:not(:last-child) {
@@ -223,8 +224,11 @@
     color: getColor('accent');
   }
 }
-.current--color {
+.mob-menu-list__link--color {
   color: getColor('accent');
+  .menu-close-btn:hover ~ & {
+    color: getColor('secondary-text');
+  }
 }
 .mob-cont-list__item {
   margin-bottom: 32px;
@@ -233,6 +237,7 @@
   @include font(24px, 500, 1.17, 0.02em);
   &--tel {
     @include font(34px, 500, 1.17, 0.02em);
+    color: getColor('accent');
   }
   &--mail {
     color: getColor('primary-text');
